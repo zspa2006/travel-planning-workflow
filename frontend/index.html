@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>同行 · 旅行规划</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="top"><div class="shell bar">
+    <a class="brand" href="./">同行<span>旅行规划</span></a>
+    <div class="account"><span id="identity"></span><button id="logout" class="quiet" hidden>退出</button></div>
+  </div></header>
+  <main class="shell">
+    <div class="intro"><p id="mode"></p><h1>旅行工作台</h1><p>和旅伴一起整理偏好、查看行程与费用。</p></div>
+    <p id="notice" role="status" aria-live="polite" hidden></p>
+    <section id="entry" class="panel" hidden>
+      <h2 id="entry-title">进入工作台</h2>
+      <form id="login">
+        <label><span id="login-name">昵称</span><input name="name" autocomplete="username" required maxlength="40"></label>
+        <label id="password-field" hidden>密码<input name="password" type="password" autocomplete="current-password" disabled></label>
+        <button>进入</button>
+      </form>
+    </section>
+    <div id="workspace" class="workspace" hidden>
+      <aside class="panel">
+        <h2>我的旅行</h2>
+        <nav id="rooms" aria-label="旅行房间"></nav>
+        <details open>
+          <summary>创建房间</summary>
+          <form id="create">
+            <label>房间名称<input name="name" required maxlength="60" placeholder="例如 周末苏州之旅"></label>
+            <label>目的地<input name="destination" required maxlength="80" placeholder="例如 苏州"></label>
+            <div class="fields dates">
+              <label>出发日期<input type="date" name="startDate" required></label>
+              <label>返程日期<input type="date" name="endDate" required></label>
+            </div>
+            <button>创建</button>
+          </form>
+        </details>
+        <details open>
+          <summary>加入房间</summary>
+          <form id="join">
+            <label>邀请码<input name="code" required maxlength="80" autocapitalize="characters"></label>
+            <button class="quiet">加入</button>
+          </form>
+          <p id="sample-help" class="muted">可用 SUZHOU 加入示例房间。</p>
+        </details>
+      </aside>
+      <section id="room" class="room" hidden>
+        <div class="panel room-head">
+          <div><h2 id="room-name"></h2><p id="room-meta"></p></div>
+          <p id="invite" class="invite"></p>
+          <div id="members" class="members"></div>
+        </div>
+        <section class="panel">
+          <h2>我的旅行偏好</h2>
+          <form id="preference">
+            <div class="fields">
+              <label>个人预算上限（元）<input name="budget" inputmode="decimal" type="number" min="0" max="100000000" step="0.01" required></label>
+              <label>旅行节奏<select name="pace"><option value="relaxed">轻松</option><option value="balanced" selected>适中</option><option value="packed">紧凑</option></select></label>
+              <label>必去地点<input name="mustVisit" placeholder="多个地点用逗号隔开" maxlength="300"></label>
+              <label>饮食禁忌<input name="dietaryRestrictions" placeholder="例如 花生过敏" maxlength="300"></label>
+            </div>
+            <button>保存偏好</button>
+          </form>
+        </section>
+        <section class="panel">
+          <div class="section-bar"><h2>行程与费用</h2><button type="button" class="quiet" id="refresh-plans">刷新方案</button></div>
+          <div id="versions" class="versions" aria-label="方案版本"></div>
+          <div id="plan"></div>
+        </section>
+      </section>
+      <p id="empty" class="panel muted" hidden>创建或加入一个旅行房间，即可填写偏好并查看方案。</p>
+    </div>
+  </main>
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>
