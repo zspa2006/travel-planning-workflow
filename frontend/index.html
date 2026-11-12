@@ -56,14 +56,18 @@
         <section class="panel conversation" aria-label="苏州旅行群聊">
           <div class="conversation-header"><h2>周末去苏州</h2><span class="muted">行程讨论</span></div>
           <ol id="messages" class="messages" aria-label="聊天消息" aria-live="polite">
-            <li class="message"><span class="avatar" aria-hidden="true">林</span><div><p class="message-meta">小林 <time>19:42</time></p><p class="bubble">周六上午先去拙政园怎么样？早点出门，下午还能逛苏博。</p></div></li>
-            <li class="message"><span class="avatar clay" aria-hidden="true">陈</span><div><p class="message-meta">阿陈 <time>19:44</time></p><p class="bubble">可以！中午想找个清淡一点的苏帮菜，离博物馆近就好。</p></div></li>
-            <li class="message"><span class="avatar blue" aria-hidden="true">周</span><div><p class="message-meta">小周 <time>19:46</time></p><p class="bubble">那平江路留到周日吧，逛完再去苏州站。</p></div></li>
+            <li class="message" data-author="小林"><span class="avatar" aria-hidden="true">林</span><div><p class="message-meta">小林 <time>19:42</time></p><p class="bubble">周六上午先去拙政园怎么样？早点出门，下午还能逛苏博。</p></div></li>
+            <li class="message" data-author="阿陈"><span class="avatar clay" aria-hidden="true">陈</span><div><p class="message-meta">阿陈 <time>19:44</time></p><p class="bubble">可以！中午想找个清淡一点的苏帮菜，离博物馆近就好。</p></div></li>
+            <li class="message" data-author="小周"><span class="avatar blue" aria-hidden="true">周</span><div><p class="message-meta">小周 <time>19:46</time></p><p class="bubble">那平江路留到周日吧，逛完再去苏州站。</p></div></li>
           </ol>
           <form id="chat-compose" class="composer">
+            <div id="reply-preview" class="reply-preview" hidden>
+              <div><strong id="reply-author"></strong><p id="reply-text"></p></div>
+              <button type="button" id="cancel-reply" class="quiet">取消回复</button>
+            </div>
             <label for="chat-message">给旅伴留言</label>
-            <div class="compose-row"><input id="chat-message" name="message" placeholder="说说你的旅行想法…" required maxlength="500"><button>发送</button></div>
-            <p class="muted">预览消息仅显示在当前页面。</p>
+            <div class="compose-row"><input id="chat-message" name="message" placeholder="说说你的旅行想法…" required maxlength="500" aria-describedby="chat-help"><button id="send-message" disabled>发送</button></div>
+            <div class="compose-feedback"><p id="chat-help" class="muted">预览消息仅显示在当前页面。</p><p id="chat-status" role="status"></p></div>
           </form>
         </section>
         <aside class="panel chat-aside">
