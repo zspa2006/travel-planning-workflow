@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 const assets = new Map([
   ['/', ['index.html', 'text/html']],
   ['/styles.css', ['styles.css', 'text/css']],
-  ...['app', 'api', 'demo'].map(name => [
+  ...['app', 'api', 'demo', 'preview'].map(name => [
     '/'+name+'.mjs', [name+'.mjs', 'text/javascript']
   ])
 ]);

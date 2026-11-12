@@ -8,10 +8,76 @@
 </head>
 <body>
   <header class="top"><div class="shell bar">
-    <a class="brand" href="./">同行<span>旅行规划</span></a>
+    <a class="brand" href="#home">同行<span>旅行规划</span></a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#home" data-page-link="home">首页</a>
+      <a href="#chat" data-page-link="chat">旅伴聊天</a>
+      <a href="#planner" data-page-link="planner">旅行工作台</a>
+    </nav>
     <div class="account"><span id="identity"></span><button id="logout" class="quiet" hidden>退出</button></div>
   </div></header>
   <main class="shell">
+    <section id="home-page" class="page home">
+      <div class="hero">
+        <div class="hero-copy">
+          <p>12 月 5 日 – 6 日 · 苏州</p>
+          <h1>周末去苏州</h1>
+          <p>和旅伴聊聊想去的地方，一起把两天的行程安排好。</p>
+          <div class="hero-actions">
+            <a class="action primary" href="#chat">打开旅伴聊天</a>
+            <a class="action secondary" href="#planner">进入旅行工作台</a>
+          </div>
+        </div>
+        <ol class="hero-itinerary" aria-label="示例行程概览">
+          <li><time datetime="2026-12-05">12.05 周六</time><strong>拙政园 · 苏州博物馆</strong><span>在园林和展厅里慢慢逛</span></li>
+          <li><time datetime="2026-12-06">12.06 周日</time><strong>平江路 · 苏州站</strong><span>沿河散步，下午返程</span></li>
+        </ol>
+      </div>
+      <div class="home-details">
+        <section class="panel">
+          <h2>这趟旅行的旅伴</h2>
+          <ul class="people">
+            <li><span class="avatar">林</span>小林</li>
+            <li><span class="avatar clay">陈</span>阿陈</li>
+            <li><span class="avatar blue">周</span>小周</li>
+          </ul>
+        </section>
+        <section class="panel">
+          <h2>候选方案费用</h2>
+          <p class="estimate">¥330 <span>团队已知费用</span></p>
+          <p class="muted">门票与市内交通已估算，住宿待确认。</p>
+        </section>
+      </div>
+      <p class="preview-note muted">界面预览 · 苏州行程与旅伴为示例</p>
+    </section>
+    <section id="chat-page" class="page chat" hidden>
+      <div class="chat-heading"><h1>旅伴聊天</h1><p class="muted">周末去苏州 · 3 位旅伴 · 界面预览</p></div>
+      <div class="chat-layout">
+        <section class="panel conversation" aria-label="苏州旅行群聊">
+          <div class="conversation-header"><h2>周末去苏州</h2><span class="muted">行程讨论</span></div>
+          <ol id="messages" class="messages" aria-label="聊天消息" aria-live="polite">
+            <li class="message"><span class="avatar" aria-hidden="true">林</span><div><p class="message-meta">小林 <time>19:42</time></p><p class="bubble">周六上午先去拙政园怎么样？早点出门，下午还能逛苏博。</p></div></li>
+            <li class="message"><span class="avatar clay" aria-hidden="true">陈</span><div><p class="message-meta">阿陈 <time>19:44</time></p><p class="bubble">可以！中午想找个清淡一点的苏帮菜，离博物馆近就好。</p></div></li>
+            <li class="message"><span class="avatar blue" aria-hidden="true">周</span><div><p class="message-meta">小周 <time>19:46</time></p><p class="bubble">那平江路留到周日吧，逛完再去苏州站。</p></div></li>
+          </ol>
+          <form id="chat-compose" class="composer">
+            <label for="chat-message">给旅伴留言</label>
+            <div class="compose-row"><input id="chat-message" name="message" placeholder="说说你的旅行想法…" required maxlength="500"><button>发送</button></div>
+            <p class="muted">预览消息仅显示在当前页面。</p>
+          </form>
+        </section>
+        <aside class="panel chat-aside">
+          <h2>旅伴</h2>
+          <ul class="people">
+            <li><span class="avatar">林</span>小林</li>
+            <li><span class="avatar clay">陈</span>阿陈</li>
+            <li><span class="avatar blue">周</span>小周</li>
+          </ul>
+          <a href="#planner">查看旅行工作台 →</a>
+        </aside>
+      </div>
+    </section>
+    <section id="planner-page" class="page" hidden>
     <div class="intro"><p id="mode"></p><h1>旅行工作台</h1><p>和旅伴一起整理偏好、查看行程与费用。</p></div>
     <p id="notice" role="status" aria-live="polite" hidden></p>
     <section id="entry" class="panel" hidden>
@@ -73,7 +139,9 @@
       </section>
       <p id="empty" class="panel muted" hidden>创建或加入一个旅行房间，即可填写偏好并查看方案。</p>
     </div>
+    </section>
   </main>
+  <script type="module" src="./preview.mjs"></script>
   <script type="module" src="./app.mjs"></script>
 </body>
 </html>
