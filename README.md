@@ -25,10 +25,25 @@ npm start
 
 用 `?api=/api` 或 `?api=http://localhost:8000/api` 指定 API 前缀。后端负责提供账号、权限及真实数据。当前字段和路由是供 C、E 评审的接入草案，集中在 [接口约定](docs/frontend-api.md) 和 [HTTP 适配器](frontend/api.mjs)。
 
+## 规则与版本模块（E）
+
+`rules/` 目录提供六类确定性校验、多数投票与版本发布守卫，纯函数实现，供 D（调度）、C（存储）、B（工作台）联调。
+
+- 六类校验：预算、时间、营业、必去、饮食、数据可信度，返回结构化问题码与阻塞/警告级别；
+- 缺价费用**不按 0 元**计入合计，标记为待人工确认；超预算不能发布；
+- 一人一票，赞成门槛 `floor(N/2)+1`（5 人门槛 3 票），弃权不计赞成；
+- 发布前版本守卫：旧任务不能覆盖新正式版本。
+
+```sh
+npm test            # 运行全部用例（含 rules 模块 21 个用例）
+```
+
 ## 设计材料
 
 - [多人协同旅行规划平台工作流总体设计](docs/workflow-design.md)
 - [六人分工依赖与联调顺序](docs/dependencies.md)
+- [规则与版本模块接口契约（E）](docs/rules-api.md)
+- [A 与 C 及 E 的前端接入约定](docs/frontend-api.md)
 
 ## 提交 Pull Request
 
