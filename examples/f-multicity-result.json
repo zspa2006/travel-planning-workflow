@@ -1,0 +1,859 @@
+{
+  "schemaVersion": 1,
+  "runId": "demo-multicity",
+  "nodeId": "plan",
+  "attempt": 1,
+  "status": "ok",
+  "data": {
+    "roomId": "multicity",
+    "title": "苏州、上海 · 4日行程",
+    "currency": "CNY",
+    "timezone": "Asia/Shanghai",
+    "origin": "南京",
+    "travelerCount": 3,
+    "dateStatus": "duration_only",
+    "stays": [
+      {
+        "id": "suzhou-stay",
+        "city": "苏州",
+        "place": null,
+        "rooms": 2,
+        "nights": 1,
+        "checkInDay": 1,
+        "checkOutDay": 2,
+        "checkInDate": null,
+        "checkOutDate": null
+      }
+    ],
+    "journeys": [
+      {
+        "id": "outbound",
+        "kind": "outbound",
+        "mode": "rail",
+        "fromCity": "南京",
+        "toCity": "苏州",
+        "fromPlace": "南京站",
+        "toPlace": "苏州站",
+        "departDay": 1,
+        "arriveDay": 1,
+        "departDate": null,
+        "arriveDate": null,
+        "departTime": "08:00",
+        "arriveTime": "10:00",
+        "bufferMinutes": 20,
+        "durationMinutes": 120,
+        "source": {
+          "provider": "user",
+          "reference": "用户提供的交通约束",
+          "queriedAt": null,
+          "confidence": "unverified"
+        }
+      },
+      {
+        "id": "suzhou-shanghai",
+        "kind": "intercity",
+        "mode": "rail",
+        "fromCity": "苏州",
+        "toCity": "上海",
+        "fromPlace": "苏州站",
+        "toPlace": "上海站",
+        "departDay": 2,
+        "arriveDay": 3,
+        "departDate": null,
+        "arriveDate": null,
+        "departTime": "23:00",
+        "arriveTime": "01:00",
+        "bufferMinutes": 30,
+        "durationMinutes": 120,
+        "source": {
+          "provider": "user",
+          "reference": "用户提供的交通约束",
+          "queriedAt": null,
+          "confidence": "unverified"
+        }
+      },
+      {
+        "id": "return",
+        "kind": "return",
+        "mode": "rail",
+        "fromCity": "上海",
+        "toCity": "南京",
+        "fromPlace": "上海站",
+        "toPlace": "南京站",
+        "departDay": 4,
+        "arriveDay": 4,
+        "departDate": null,
+        "arriveDate": null,
+        "departTime": "16:00",
+        "arriveTime": "18:00",
+        "bufferMinutes": 30,
+        "durationMinutes": 120,
+        "source": {
+          "provider": "user",
+          "reference": "用户提供的交通约束",
+          "queriedAt": null,
+          "confidence": "unverified"
+        }
+      }
+    ],
+    "lodgingRequirements": [],
+    "avoidModes": [],
+    "guides": [],
+    "days": [
+      {
+        "day": 1,
+        "date": null,
+        "city": "苏州",
+        "activities": [
+          {
+            "id": "day-1-1",
+            "start": "10:00",
+            "end": "10:20",
+            "durationMinutes": 20,
+            "place": "抵达 苏州站",
+            "placeName": "苏州站",
+            "placeId": "import-1",
+            "role": "arrival",
+            "location": null,
+            "address": null,
+            "notes": null,
+            "source": {
+              "provider": "课程样例",
+              "reference": "离线演示",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "locationSource": {
+              "provider": "课程样例",
+              "reference": "离线演示",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "timeSource": {
+              "provider": "user",
+              "reference": "用户提供的交通约束",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "durationSource": {
+              "provider": "planner",
+              "reference": "停留或接驳预留时长",
+              "queriedAt": null,
+              "confidence": "estimated"
+            },
+            "opening": [],
+            "openingSource": {
+              "provider": "none",
+              "reference": "营业时间",
+              "queriedAt": null,
+              "confidence": "missing"
+            },
+            "dietary": [],
+            "transport": "",
+            "inboundRoute": null,
+            "journeyId": "outbound"
+          },
+          {
+            "id": "day-1-2",
+            "start": "10:50",
+            "end": "12:05",
+            "durationMinutes": 75,
+            "place": "拙政园",
+            "placeName": "拙政园",
+            "placeId": "import-2",
+            "role": "sight",
+            "location": null,
+            "address": null,
+            "notes": null,
+            "source": {
+              "provider": "课程样例",
+              "reference": "离线演示",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "locationSource": {
+              "provider": "课程样例",
+              "reference": "离线演示",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "timeSource": {
+              "provider": "planner",
+              "reference": "编排时段",
+              "queriedAt": null,
+              "confidence": "estimated"
+            },
+            "durationSource": {
+              "provider": "planner",
+              "reference": "停留或接驳预留时长",
+              "queriedAt": null,
+              "confidence": "estimated"
+            },
+            "opening": [],
+            "openingSource": {
+              "provider": "none",
+              "reference": "营业时间",
+              "queriedAt": null,
+              "confidence": "missing"
+            },
+            "dietary": [],
+            "transport": "打车待确认（预留30分钟）",
+            "inboundRoute": {
+              "id": "suzhou-taxi",
+              "day": 1,
+              "date": null,
+              "fromDay": 1,
+              "fromDate": null,
+              "index": 1,
+              "sameDay": true,
+              "intercity": false,
+              "mode": "taxi",
+              "vehicles": 1,
+              "seatsPerVehicle": 3,
+              "from": {
+                "id": "import-1",
+                "name": "苏州站",
+                "city": "苏州"
+              },
+              "to": {
+                "id": "import-2",
+                "name": "拙政园",
+                "city": "苏州"
+              },
+              "durationMinutes": null,
+              "distanceMeters": null,
+              "source": {
+                "provider": "none",
+                "reference": "路线数据",
+                "queriedAt": null,
+                "confidence": "missing"
+              },
+              "basis": null,
+              "segments": [],
+              "reservedMinutes": 30
+            },
+            "journeyId": null
+          }
+        ],
+        "journeyIds": [
+          "outbound"
+        ]
+      },
+      {
+        "day": 2,
+        "date": null,
+        "city": "苏州",
+        "activities": [
+          {
+            "id": "day-2-1",
+            "start": "22:30",
+            "end": "23:00",
+            "durationMinutes": 30,
+            "place": "离开 苏州站",
+            "placeName": "苏州站",
+            "placeId": "import-1",
+            "role": "departure",
+            "location": null,
+            "address": null,
+            "notes": null,
+            "source": {
+              "provider": "课程样例",
+              "reference": "离线演示",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "locationSource": {
+              "provider": "课程样例",
+              "reference": "离线演示",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "timeSource": {
+              "provider": "user",
+              "reference": "用户提供的交通约束",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "durationSource": {
+              "provider": "planner",
+              "reference": "停留或接驳预留时长",
+              "queriedAt": null,
+              "confidence": "estimated"
+            },
+            "opening": [],
+            "openingSource": {
+              "provider": "none",
+              "reference": "营业时间",
+              "queriedAt": null,
+              "confidence": "missing"
+            },
+            "dietary": [],
+            "transport": "",
+            "inboundRoute": null,
+            "journeyId": "suzhou-shanghai"
+          }
+        ],
+        "journeyIds": [
+          "suzhou-shanghai"
+        ]
+      },
+      {
+        "day": 3,
+        "date": null,
+        "city": "上海",
+        "activities": [
+          {
+            "id": "day-3-1",
+            "start": "01:00",
+            "end": "01:30",
+            "durationMinutes": 30,
+            "place": "抵达 上海站",
+            "placeName": "上海站",
+            "placeId": "import-3",
+            "role": "arrival",
+            "location": null,
+            "address": null,
+            "notes": null,
+            "source": {
+              "provider": "课程样例",
+              "reference": "离线演示",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "locationSource": {
+              "provider": "课程样例",
+              "reference": "离线演示",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "timeSource": {
+              "provider": "user",
+              "reference": "用户提供的交通约束",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "durationSource": {
+              "provider": "planner",
+              "reference": "停留或接驳预留时长",
+              "queriedAt": null,
+              "confidence": "estimated"
+            },
+            "opening": [],
+            "openingSource": {
+              "provider": "none",
+              "reference": "营业时间",
+              "queriedAt": null,
+              "confidence": "missing"
+            },
+            "dietary": [],
+            "transport": "",
+            "inboundRoute": null,
+            "journeyId": "suzhou-shanghai"
+          },
+          {
+            "id": "day-3-2",
+            "start": "02:00",
+            "end": "03:15",
+            "durationMinutes": 75,
+            "place": "外滩",
+            "placeName": "外滩",
+            "placeId": "import-4",
+            "role": "sight",
+            "location": null,
+            "address": null,
+            "notes": null,
+            "source": {
+              "provider": "课程样例",
+              "reference": "离线演示",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "locationSource": {
+              "provider": "课程样例",
+              "reference": "离线演示",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "timeSource": {
+              "provider": "planner",
+              "reference": "编排时段",
+              "queriedAt": null,
+              "confidence": "estimated"
+            },
+            "durationSource": {
+              "provider": "planner",
+              "reference": "停留或接驳预留时长",
+              "queriedAt": null,
+              "confidence": "estimated"
+            },
+            "opening": [],
+            "openingSource": {
+              "provider": "none",
+              "reference": "营业时间",
+              "queriedAt": null,
+              "confidence": "missing"
+            },
+            "dietary": [],
+            "transport": "步行待确认（预留30分钟）",
+            "inboundRoute": {
+              "id": null,
+              "day": 3,
+              "date": null,
+              "fromDay": 3,
+              "fromDate": null,
+              "index": 1,
+              "sameDay": true,
+              "intercity": false,
+              "mode": "walking",
+              "vehicles": null,
+              "seatsPerVehicle": null,
+              "from": {
+                "id": "import-3",
+                "name": "上海站",
+                "city": "上海"
+              },
+              "to": {
+                "id": "import-4",
+                "name": "外滩",
+                "city": "上海"
+              },
+              "durationMinutes": null,
+              "distanceMeters": null,
+              "source": {
+                "provider": "none",
+                "reference": "路线数据",
+                "queriedAt": null,
+                "confidence": "missing"
+              },
+              "basis": null,
+              "segments": [],
+              "reservedMinutes": 30
+            },
+            "journeyId": null
+          }
+        ],
+        "journeyIds": [
+          "suzhou-shanghai"
+        ]
+      },
+      {
+        "day": 4,
+        "date": null,
+        "city": "上海",
+        "activities": [
+          {
+            "id": "day-4-1",
+            "start": "15:30",
+            "end": "16:00",
+            "durationMinutes": 30,
+            "place": "离开 上海站",
+            "placeName": "上海站",
+            "placeId": "import-3",
+            "role": "departure",
+            "location": null,
+            "address": null,
+            "notes": null,
+            "source": {
+              "provider": "课程样例",
+              "reference": "离线演示",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "locationSource": {
+              "provider": "课程样例",
+              "reference": "离线演示",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "timeSource": {
+              "provider": "user",
+              "reference": "用户提供的交通约束",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "durationSource": {
+              "provider": "planner",
+              "reference": "停留或接驳预留时长",
+              "queriedAt": null,
+              "confidence": "estimated"
+            },
+            "opening": [],
+            "openingSource": {
+              "provider": "none",
+              "reference": "营业时间",
+              "queriedAt": null,
+              "confidence": "missing"
+            },
+            "dietary": [],
+            "transport": "",
+            "inboundRoute": null,
+            "journeyId": "return"
+          }
+        ],
+        "journeyIds": [
+          "return"
+        ]
+      }
+    ],
+    "expenses": [
+      {
+        "category": "住宿",
+        "label": "两间房一晚估算",
+        "scope": "shared",
+        "unit": "roomNight",
+        "quantity": 2,
+        "unitFen": null,
+        "unitFenRange": [
+          28000,
+          45000
+        ],
+        "totalFen": null,
+        "conditions": null,
+        "travelers": 3,
+        "place": null,
+        "date": null,
+        "serviceId": "suzhou-stay",
+        "chargeId": null,
+        "taxIncluded": null,
+        "source": {
+          "provider": "课程样例",
+          "reference": "演示区间，实际价格待核实",
+          "queriedAt": null,
+          "confidence": "estimated"
+        },
+        "id": "expense-1"
+      },
+      {
+        "category": "市内交通",
+        "label": "入城接驳估算",
+        "scope": "shared",
+        "unit": "vehicle",
+        "quantity": 1,
+        "unitFen": 4500,
+        "unitFenRange": null,
+        "totalFen": 4500,
+        "conditions": null,
+        "travelers": 3,
+        "place": null,
+        "date": null,
+        "serviceId": "suzhou-taxi",
+        "chargeId": null,
+        "taxIncluded": null,
+        "source": {
+          "provider": "课程样例",
+          "reference": "演示金额，实际价格待核实",
+          "queriedAt": null,
+          "confidence": "estimated"
+        },
+        "id": "expense-2"
+      },
+      {
+        "id": "expense-3",
+        "category": "往返交通",
+        "label": "outbound待确认",
+        "scope": "personal",
+        "unit": "team",
+        "unitFen": null,
+        "unitFenRange": null,
+        "quantity": 1,
+        "travelers": 3,
+        "totalFen": null,
+        "conditions": null,
+        "place": null,
+        "date": null,
+        "serviceId": "outbound",
+        "chargeId": null,
+        "taxIncluded": null,
+        "source": {
+          "provider": "none",
+          "reference": "往返交通报价",
+          "queriedAt": null,
+          "confidence": "missing"
+        }
+      },
+      {
+        "id": "expense-4",
+        "category": "城际交通",
+        "label": "suzhou-shanghai待确认",
+        "scope": "personal",
+        "unit": "team",
+        "unitFen": null,
+        "unitFenRange": null,
+        "quantity": 1,
+        "travelers": 3,
+        "totalFen": null,
+        "conditions": null,
+        "place": null,
+        "date": null,
+        "serviceId": "suzhou-shanghai",
+        "chargeId": null,
+        "taxIncluded": null,
+        "source": {
+          "provider": "none",
+          "reference": "城际交通报价",
+          "queriedAt": null,
+          "confidence": "missing"
+        }
+      },
+      {
+        "id": "expense-5",
+        "category": "往返交通",
+        "label": "return待确认",
+        "scope": "personal",
+        "unit": "team",
+        "unitFen": null,
+        "unitFenRange": null,
+        "quantity": 1,
+        "travelers": 3,
+        "totalFen": null,
+        "conditions": null,
+        "place": null,
+        "date": null,
+        "serviceId": "return",
+        "chargeId": null,
+        "taxIncluded": null,
+        "source": {
+          "provider": "none",
+          "reference": "往返交通报价",
+          "queriedAt": null,
+          "confidence": "missing"
+        }
+      },
+      {
+        "id": "expense-6",
+        "category": "餐饮",
+        "label": "餐饮待确认",
+        "scope": "personal",
+        "unit": "team",
+        "unitFen": null,
+        "unitFenRange": null,
+        "quantity": 1,
+        "travelers": 3,
+        "totalFen": null,
+        "conditions": null,
+        "place": null,
+        "date": null,
+        "serviceId": null,
+        "chargeId": null,
+        "taxIncluded": null,
+        "source": {
+          "provider": "none",
+          "reference": "餐饮报价",
+          "queriedAt": null,
+          "confidence": "missing"
+        }
+      },
+      {
+        "id": "expense-7",
+        "category": "门票",
+        "label": "门票待确认",
+        "scope": "personal",
+        "unit": "team",
+        "unitFen": null,
+        "unitFenRange": null,
+        "quantity": 1,
+        "travelers": 3,
+        "totalFen": null,
+        "conditions": null,
+        "place": null,
+        "date": null,
+        "serviceId": null,
+        "chargeId": null,
+        "taxIncluded": null,
+        "source": {
+          "provider": "none",
+          "reference": "门票报价",
+          "queriedAt": null,
+          "confidence": "missing"
+        }
+      }
+    ],
+    "budget": {
+      "knownTotalFen": 4500,
+      "teamBudgetFen": 80000,
+      "missingCount": 6,
+      "unpricedCount": 5,
+      "quotedRangeFen": [
+        60500,
+        94500
+      ],
+      "totalRangeFen": null,
+      "balanceFen": null,
+      "perPersonFen": null,
+      "categories": [
+        {
+          "category": "住宿",
+          "knownTotalFen": 0,
+          "missingCount": 1
+        },
+        {
+          "category": "市内交通",
+          "knownTotalFen": 4500,
+          "missingCount": 0
+        },
+        {
+          "category": "往返交通",
+          "knownTotalFen": 0,
+          "missingCount": 2
+        },
+        {
+          "category": "城际交通",
+          "knownTotalFen": 0,
+          "missingCount": 1
+        },
+        {
+          "category": "餐饮",
+          "knownTotalFen": 0,
+          "missingCount": 1
+        },
+        {
+          "category": "门票",
+          "knownTotalFen": 0,
+          "missingCount": 1
+        }
+      ]
+    },
+    "preferences": {
+      "pace": "balanced",
+      "mustVisit": [],
+      "dietaryRestrictions": [],
+      "memberBudgets": [],
+      "constraintsByMember": []
+    },
+    "issues": [
+      {
+        "code": "AUTO_QUOTE_UNAVAILABLE",
+        "message": "暂无适用自动报价，可手动补充",
+        "serviceId": "outbound"
+      },
+      {
+        "code": "AUTO_QUOTE_UNAVAILABLE",
+        "message": "暂无适用自动报价，可手动补充",
+        "serviceId": "suzhou-shanghai"
+      },
+      {
+        "code": "AUTO_QUOTE_UNAVAILABLE",
+        "message": "暂无适用自动报价，可手动补充",
+        "serviceId": "return"
+      },
+      {
+        "code": "HOTEL_UNCONFIRMED",
+        "message": "住宿地点待确认",
+        "day": 1,
+        "date": null,
+        "serviceId": "suzhou-stay"
+      },
+      {
+        "code": "MEAL_UNCONFIRMED",
+        "message": "缺少餐饮地点",
+        "date": null
+      },
+      {
+        "code": "NO_DAY_VISITS",
+        "message": "当天暂无游览候选",
+        "date": null
+      },
+      {
+        "code": "MEAL_UNCONFIRMED",
+        "message": "缺少餐饮地点",
+        "date": null
+      },
+      {
+        "code": "MEAL_UNCONFIRMED",
+        "message": "缺少餐饮地点",
+        "date": null
+      },
+      {
+        "code": "NO_DAY_VISITS",
+        "message": "当天暂无游览候选",
+        "date": null
+      },
+      {
+        "code": "MEAL_UNCONFIRMED",
+        "message": "缺少餐饮地点",
+        "date": null
+      },
+      {
+        "code": "ROUTE_UNVERIFIED",
+        "message": "路线耗时待确认",
+        "day": 1,
+        "date": null,
+        "from": "苏州站",
+        "to": "拙政园",
+        "mode": "taxi",
+        "providerCode": null
+      },
+      {
+        "code": "ROUTE_UNVERIFIED",
+        "message": "路线耗时待确认",
+        "day": 3,
+        "date": null,
+        "from": "上海站",
+        "to": "外滩",
+        "mode": "walking",
+        "providerCode": null
+      },
+      {
+        "code": "TRAVEL_DATES_MISSING",
+        "message": "时长草案需补齐日期后核验路线和报价"
+      },
+      {
+        "code": "OPENING_UNVERIFIED",
+        "message": "营业时间待确认",
+        "day": 1,
+        "date": null,
+        "place": "拙政园"
+      },
+      {
+        "code": "OPENING_UNVERIFIED",
+        "message": "营业时间待确认",
+        "day": 3,
+        "date": null,
+        "place": "外滩"
+      },
+      {
+        "code": "PRICE_MISSING",
+        "message": "费用待确认",
+        "expenseId": "expense-1",
+        "category": "住宿"
+      },
+      {
+        "code": "PRICE_MISSING",
+        "message": "费用待确认",
+        "expenseId": "expense-3",
+        "category": "往返交通"
+      },
+      {
+        "code": "PRICE_MISSING",
+        "message": "费用待确认",
+        "expenseId": "expense-4",
+        "category": "城际交通"
+      },
+      {
+        "code": "PRICE_MISSING",
+        "message": "费用待确认",
+        "expenseId": "expense-5",
+        "category": "往返交通"
+      },
+      {
+        "code": "PRICE_MISSING",
+        "message": "费用待确认",
+        "expenseId": "expense-6",
+        "category": "餐饮"
+      },
+      {
+        "code": "PRICE_MISSING",
+        "message": "费用待确认",
+        "expenseId": "expense-7",
+        "category": "门票"
+      },
+      {
+        "code": "PRICE_RANGE_BUDGET_RISK",
+        "message": "已列报价区间存在超支风险",
+        "lowerFen": 60500,
+        "upperFen": 94500,
+        "budgetFen": 80000
+      }
+    ]
+  }
+}

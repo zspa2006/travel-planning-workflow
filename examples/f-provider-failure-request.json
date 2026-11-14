@@ -1,0 +1,6 @@
+{
+  "runId": "demo-provider-failure",
+  "input": {
+    "room": { "id": "room-demo-failure", "destination": "苏州", "startDate": "2026-12-05", "endDate": "2026-12-06" }
+  }
+}

@@ -34,3 +34,7 @@ Expense    { category: string, label: string, scope: "personal"|"shared",
 - 非成功响应使用 HTTP 状态和 `{code,message}`。建议 401 表示会话失效，403 表示没有房间访问权限，404 表示房间或邀请码不存在，409 表示版本冲突，422 表示字段校验失败。会话和房间权限在服务端校验。
 - 同源部署可经反向代理提供 `/api`。跨源时约定可携带凭据的 CORS 来源、Cookie 策略和写操作 CSRF 防护。前端登录使用已有账号，注册与账号维护由 C 提供。
 - 规划启动、门控、投票和发布的接口由 B、D、E 联合定义。A 通过 C 的方案查询读取版本结果。
+
+F 返回的候选行程已有 `title`、`days` 和 `expenses`，并带有路线、费用来源和可信状态。E 校验后，C 在存储阶段补充 `id`、`version` 和 `status`，通过方案查询提供给 A。见 [F 智能体接口](agent-api.md)。
+
+F 的未定日期草案使用 `dateStatus: "duration_only"` 和 `days[].day`，`days[].date` 为空。此类草案需补齐日期后再进入上述方案展示契约。

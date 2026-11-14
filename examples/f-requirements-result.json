@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "runId": "demo-requirement-text",
+  "nodeId": "parse",
+  "attempt": 1,
+  "status": "ok",
+  "data": {
+    "state": "needs_confirmation",
+    "requirementDraft": {
+      "destination": "苏州",
+      "durationDays": 2,
+      "travelerCount": 2,
+      "budgetFen": 120000,
+      "mustVisit": [
+        "拙政园",
+        "平江路"
+      ],
+      "dietaryRestrictions": [
+        "素食"
+      ],
+      "unresolved": [
+        "确认饮食限制所属成员"
+      ],
+      "source": {
+        "provider": "requirement-parser",
+        "reference": "显式提交的多人需求文本",
+        "queriedAt": null,
+        "confidence": "unverified"
+      }
+    }
+  }
+}
