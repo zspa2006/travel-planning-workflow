@@ -1,0 +1,27 @@
+{
+  "runId": "demo-handoff",
+  "input": {
+    "room": { "id": "room-demo-handoff", "destination": "苏州", "startDate": "2026-12-05", "endDate": "2026-12-06" },
+    "budgetFen": 10000,
+    "transportMode": "walking",
+    "journeys": [
+      { "id": "return-early", "kind": "return", "mode": "rail", "fromCity": "苏州", "fromPlace": "苏州站",
+        "toCity": "南京", "toPlace": "南京站", "departDay": 2, "arriveDay": 2,
+        "departTime": "11:00", "arriveTime": "12:00", "bufferMinutes": 30 }
+    ],
+    "members": [
+      { "id": "member-1", "preference": { "mustVisit": ["拙政园"], "dietaryRestrictions": ["素食"] } },
+      { "id": "member-2", "preference": { "mustVisit": ["团队尚未选定的景点"] } }
+    ],
+    "places": [
+      { "name": "拙政园", "city": "苏州", "kind": "sight", "opening": [{ "start": "06:00", "end": "08:00" }],
+        "source": { "provider": "课程样例", "reference": "故意构造的营业冲突" } },
+      { "name": "联调餐厅", "city": "苏州", "kind": "food",
+        "source": { "provider": "课程样例", "reference": "饮食信息待核实" } }
+    ],
+    "quotes": [
+      { "category": "门票", "label": "团队门票", "scope": "personal", "unit": "person", "unitFen": 8000, "quantity": 2,
+        "source": { "provider": "课程样例", "reference": "团队合计预算测试", "confidence": "estimated" } }
+    ]
+  }
+}

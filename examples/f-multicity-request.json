@@ -1,0 +1,41 @@
+{
+  "runId": "demo-multicity",
+  "input": {
+    "room": { "id": "multicity", "destination": "苏州、上海" },
+    "origin": "南京",
+    "durationDays": 4,
+    "travelerCount": 3,
+    "budgetFen": 80000,
+    "stops": [{ "city": "苏州", "days": 2 }, { "city": "上海", "days": 2 }],
+    "transportMode": "walking",
+    "stays": [{ "id": "suzhou-stay", "city": "苏州", "checkInDay": 1, "checkOutDay": 2, "rooms": 2 }],
+    "journeys": [
+      { "id": "outbound", "kind": "outbound", "mode": "rail", "fromCity": "南京", "fromPlace": "南京站",
+        "toCity": "苏州", "toPlace": "苏州站", "departDay": 1, "arriveDay": 1, "departTime": "08:00",
+        "arriveTime": "10:00", "bufferMinutes": 20 },
+      { "id": "suzhou-shanghai", "kind": "intercity", "mode": "rail", "fromCity": "苏州", "fromPlace": "苏州站",
+        "toCity": "上海", "toPlace": "上海站", "departDay": 2, "arriveDay": 3, "departTime": "23:00",
+        "arriveTime": "01:00", "bufferMinutes": 30 },
+      { "id": "return", "kind": "return", "mode": "rail", "fromCity": "上海", "fromPlace": "上海站",
+        "toCity": "南京", "toPlace": "南京站", "departDay": 4, "arriveDay": 4, "departTime": "16:00",
+        "arriveTime": "18:00", "bufferMinutes": 30 }
+    ],
+    "places": [
+      { "name": "苏州站", "city": "苏州", "kind": "station", "source": { "provider": "课程样例", "reference": "离线演示" } },
+      { "name": "拙政园", "city": "苏州", "kind": "sight", "source": { "provider": "课程样例", "reference": "离线演示" } },
+      { "name": "上海站", "city": "上海", "kind": "station", "source": { "provider": "课程样例", "reference": "离线演示" } },
+      { "name": "外滩", "city": "上海", "kind": "sight", "source": { "provider": "课程样例", "reference": "离线演示" } }
+    ],
+    "routePreferences": [
+      { "id": "suzhou-taxi", "day": 1, "from": "苏州站", "to": "拙政园", "mode": "taxi", "vehicles": 1, "seatsPerVehicle": 3 }
+    ],
+    "quotes": [
+      { "serviceId": "suzhou-stay", "category": "住宿", "label": "两间房一晚估算", "scope": "shared", "unit": "roomNight",
+        "unitFen": null, "unitFenRange": [28000, 45000], "quantity": 2, "travelers": 3,
+        "source": { "provider": "课程样例", "reference": "演示区间，实际价格待核实", "confidence": "estimated" } },
+      { "serviceId": "suzhou-taxi", "category": "市内交通", "label": "入城接驳估算", "scope": "shared", "unit": "vehicle",
+        "unitFen": 4500, "quantity": 1, "travelers": 3,
+        "source": { "provider": "课程样例", "reference": "演示金额，实际价格待核实", "confidence": "estimated" } }
+    ]
+  }
+}

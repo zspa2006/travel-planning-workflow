@@ -1,0 +1,638 @@
+{
+  "schemaVersion": 1,
+  "runId": "demo-suzhou",
+  "nodeId": "plan",
+  "attempt": 1,
+  "status": "ok",
+  "data": {
+    "roomId": "suzhou-demo",
+    "title": "苏州 · 2日行程",
+    "currency": "CNY",
+    "timezone": "Asia/Shanghai",
+    "origin": null,
+    "travelerCount": 2,
+    "dateStatus": "dated",
+    "stays": [],
+    "journeys": [],
+    "lodgingRequirements": [],
+    "avoidModes": [],
+    "guides": [],
+    "days": [
+      {
+        "day": 1,
+        "date": "2026-12-05",
+        "city": "苏州",
+        "activities": [
+          {
+            "id": "2026-12-05-1",
+            "start": "09:00",
+            "end": "09:30",
+            "durationMinutes": 30,
+            "place": "抵达 苏州站",
+            "placeName": "苏州站",
+            "placeId": "import-3",
+            "role": "arrival",
+            "location": null,
+            "address": null,
+            "notes": null,
+            "source": {
+              "provider": "课程样例",
+              "reference": "苏州离线联调样例",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "locationSource": {
+              "provider": "课程样例",
+              "reference": "苏州离线联调样例",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "timeSource": {
+              "provider": "planner",
+              "reference": "编排时段",
+              "queriedAt": null,
+              "confidence": "estimated"
+            },
+            "durationSource": {
+              "provider": "planner",
+              "reference": "停留或接驳预留时长",
+              "queriedAt": null,
+              "confidence": "estimated"
+            },
+            "opening": [],
+            "openingSource": {
+              "provider": "none",
+              "reference": "营业时间",
+              "queriedAt": null,
+              "confidence": "missing"
+            },
+            "dietary": [],
+            "transport": "",
+            "inboundRoute": null,
+            "journeyId": null
+          },
+          {
+            "id": "2026-12-05-2",
+            "start": "10:00",
+            "end": "11:15",
+            "durationMinutes": 75,
+            "place": "拙政园",
+            "placeName": "拙政园",
+            "placeId": "import-1",
+            "role": "sight",
+            "location": null,
+            "address": null,
+            "notes": null,
+            "source": {
+              "provider": "课程样例",
+              "reference": "苏州离线联调样例营业时段",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "locationSource": {
+              "provider": "课程样例",
+              "reference": "苏州离线联调样例营业时段",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "timeSource": {
+              "provider": "planner",
+              "reference": "编排时段",
+              "queriedAt": null,
+              "confidence": "estimated"
+            },
+            "durationSource": {
+              "provider": "planner",
+              "reference": "停留或接驳预留时长",
+              "queriedAt": null,
+              "confidence": "estimated"
+            },
+            "opening": [
+              {
+                "start": "08:00",
+                "end": "17:00"
+              }
+            ],
+            "openingSource": {
+              "provider": "课程样例",
+              "reference": "苏州离线联调样例营业时段",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "dietary": [],
+            "transport": "步行待确认（预留30分钟）",
+            "inboundRoute": {
+              "id": null,
+              "day": 1,
+              "date": "2026-12-05",
+              "fromDay": 1,
+              "fromDate": "2026-12-05",
+              "index": 1,
+              "sameDay": true,
+              "intercity": false,
+              "mode": "walking",
+              "vehicles": null,
+              "seatsPerVehicle": null,
+              "from": {
+                "id": "import-3",
+                "name": "苏州站",
+                "city": "苏州"
+              },
+              "to": {
+                "id": "import-1",
+                "name": "拙政园",
+                "city": "苏州"
+              },
+              "durationMinutes": null,
+              "distanceMeters": null,
+              "source": {
+                "provider": "none",
+                "reference": "路线数据",
+                "queriedAt": null,
+                "confidence": "missing"
+              },
+              "basis": null,
+              "segments": [],
+              "reservedMinutes": 30
+            },
+            "journeyId": null
+          }
+        ],
+        "journeyIds": []
+      },
+      {
+        "day": 2,
+        "date": "2026-12-06",
+        "city": "苏州",
+        "activities": [
+          {
+            "id": "2026-12-06-1",
+            "start": "09:30",
+            "end": "10:45",
+            "durationMinutes": 75,
+            "place": "平江路",
+            "placeName": "平江路",
+            "placeId": "import-2",
+            "role": "sight",
+            "location": null,
+            "address": null,
+            "notes": null,
+            "source": {
+              "provider": "课程样例",
+              "reference": "苏州离线联调样例",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "locationSource": {
+              "provider": "课程样例",
+              "reference": "苏州离线联调样例",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "timeSource": {
+              "provider": "planner",
+              "reference": "编排时段",
+              "queriedAt": null,
+              "confidence": "estimated"
+            },
+            "durationSource": {
+              "provider": "planner",
+              "reference": "停留或接驳预留时长",
+              "queriedAt": null,
+              "confidence": "estimated"
+            },
+            "opening": [],
+            "openingSource": {
+              "provider": "none",
+              "reference": "营业时间",
+              "queriedAt": null,
+              "confidence": "missing"
+            },
+            "dietary": [],
+            "transport": "步行待确认（预留30分钟）",
+            "inboundRoute": {
+              "id": null,
+              "day": 2,
+              "date": "2026-12-06",
+              "fromDay": 1,
+              "fromDate": "2026-12-05",
+              "index": 0,
+              "sameDay": false,
+              "intercity": false,
+              "mode": "walking",
+              "vehicles": null,
+              "seatsPerVehicle": null,
+              "from": {
+                "id": "import-1",
+                "name": "拙政园",
+                "city": "苏州"
+              },
+              "to": {
+                "id": "import-2",
+                "name": "平江路",
+                "city": "苏州"
+              },
+              "durationMinutes": null,
+              "distanceMeters": null,
+              "source": {
+                "provider": "none",
+                "reference": "路线数据",
+                "queriedAt": null,
+                "confidence": "missing"
+              },
+              "basis": null,
+              "segments": [],
+              "reservedMinutes": 30
+            },
+            "journeyId": null
+          },
+          {
+            "id": "2026-12-06-2",
+            "start": "11:15",
+            "end": "11:45",
+            "durationMinutes": 30,
+            "place": "离开 苏州站",
+            "placeName": "苏州站",
+            "placeId": "import-3",
+            "role": "departure",
+            "location": null,
+            "address": null,
+            "notes": null,
+            "source": {
+              "provider": "课程样例",
+              "reference": "苏州离线联调样例",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "locationSource": {
+              "provider": "课程样例",
+              "reference": "苏州离线联调样例",
+              "queriedAt": null,
+              "confidence": "unverified"
+            },
+            "timeSource": {
+              "provider": "planner",
+              "reference": "编排时段",
+              "queriedAt": null,
+              "confidence": "estimated"
+            },
+            "durationSource": {
+              "provider": "planner",
+              "reference": "停留或接驳预留时长",
+              "queriedAt": null,
+              "confidence": "estimated"
+            },
+            "opening": [],
+            "openingSource": {
+              "provider": "none",
+              "reference": "营业时间",
+              "queriedAt": null,
+              "confidence": "missing"
+            },
+            "dietary": [],
+            "transport": "步行待确认（预留30分钟）",
+            "inboundRoute": {
+              "id": null,
+              "day": 2,
+              "date": "2026-12-06",
+              "fromDay": 2,
+              "fromDate": "2026-12-06",
+              "index": 1,
+              "sameDay": true,
+              "intercity": false,
+              "mode": "walking",
+              "vehicles": null,
+              "seatsPerVehicle": null,
+              "from": {
+                "id": "import-2",
+                "name": "平江路",
+                "city": "苏州"
+              },
+              "to": {
+                "id": "import-3",
+                "name": "苏州站",
+                "city": "苏州"
+              },
+              "durationMinutes": null,
+              "distanceMeters": null,
+              "source": {
+                "provider": "none",
+                "reference": "路线数据",
+                "queriedAt": null,
+                "confidence": "missing"
+              },
+              "basis": null,
+              "segments": [],
+              "reservedMinutes": 30
+            },
+            "journeyId": null
+          }
+        ],
+        "journeyIds": []
+      }
+    ],
+    "expenses": [
+      {
+        "category": "门票",
+        "label": "拙政园门票估算",
+        "scope": "personal",
+        "unit": "person",
+        "quantity": 2,
+        "unitFen": 8000,
+        "unitFenRange": null,
+        "totalFen": 16000,
+        "conditions": "课程测算用示例单价，实际价格待核实",
+        "travelers": 2,
+        "place": "拙政园",
+        "date": null,
+        "serviceId": null,
+        "chargeId": null,
+        "taxIncluded": null,
+        "source": {
+          "provider": "课程样例",
+          "reference": "门票测算样例",
+          "queriedAt": null,
+          "confidence": "estimated"
+        },
+        "id": "expense-1"
+      },
+      {
+        "id": "expense-2",
+        "category": "餐饮",
+        "label": "餐饮待确认",
+        "scope": "personal",
+        "unit": "team",
+        "unitFen": null,
+        "unitFenRange": null,
+        "quantity": 1,
+        "travelers": 2,
+        "totalFen": null,
+        "conditions": null,
+        "place": null,
+        "date": null,
+        "serviceId": null,
+        "chargeId": null,
+        "taxIncluded": null,
+        "source": {
+          "provider": "none",
+          "reference": "餐饮报价",
+          "queriedAt": null,
+          "confidence": "missing"
+        }
+      },
+      {
+        "id": "expense-3",
+        "category": "市内交通",
+        "label": "市内交通待确认",
+        "scope": "shared",
+        "unit": "team",
+        "unitFen": null,
+        "unitFenRange": null,
+        "quantity": 1,
+        "travelers": 2,
+        "totalFen": null,
+        "conditions": null,
+        "place": null,
+        "date": null,
+        "serviceId": null,
+        "chargeId": null,
+        "taxIncluded": null,
+        "source": {
+          "provider": "none",
+          "reference": "市内交通报价",
+          "queriedAt": null,
+          "confidence": "missing"
+        }
+      },
+      {
+        "id": "expense-4",
+        "category": "住宿",
+        "label": "住宿待确认",
+        "scope": "shared",
+        "unit": "team",
+        "unitFen": null,
+        "unitFenRange": null,
+        "quantity": 1,
+        "travelers": 2,
+        "totalFen": null,
+        "conditions": null,
+        "place": null,
+        "date": null,
+        "serviceId": null,
+        "chargeId": null,
+        "taxIncluded": null,
+        "source": {
+          "provider": "none",
+          "reference": "住宿报价",
+          "queriedAt": null,
+          "confidence": "missing"
+        }
+      },
+      {
+        "id": "expense-5",
+        "category": "往返交通",
+        "label": "往返交通待确认",
+        "scope": "personal",
+        "unit": "team",
+        "unitFen": null,
+        "unitFenRange": null,
+        "quantity": 1,
+        "travelers": 2,
+        "totalFen": null,
+        "conditions": null,
+        "place": null,
+        "date": null,
+        "serviceId": null,
+        "chargeId": null,
+        "taxIncluded": null,
+        "source": {
+          "provider": "none",
+          "reference": "往返交通报价",
+          "queriedAt": null,
+          "confidence": "missing"
+        }
+      }
+    ],
+    "budget": {
+      "knownTotalFen": 16000,
+      "teamBudgetFen": 120000,
+      "missingCount": 4,
+      "unpricedCount": 4,
+      "quotedRangeFen": [
+        16000,
+        16000
+      ],
+      "totalRangeFen": null,
+      "balanceFen": null,
+      "perPersonFen": null,
+      "categories": [
+        {
+          "category": "门票",
+          "knownTotalFen": 16000,
+          "missingCount": 0
+        },
+        {
+          "category": "餐饮",
+          "knownTotalFen": 0,
+          "missingCount": 1
+        },
+        {
+          "category": "市内交通",
+          "knownTotalFen": 0,
+          "missingCount": 1
+        },
+        {
+          "category": "住宿",
+          "knownTotalFen": 0,
+          "missingCount": 1
+        },
+        {
+          "category": "往返交通",
+          "knownTotalFen": 0,
+          "missingCount": 1
+        }
+      ]
+    },
+    "preferences": {
+      "pace": "relaxed",
+      "mustVisit": [
+        "拙政园",
+        "平江路"
+      ],
+      "dietaryRestrictions": [
+        "素食"
+      ],
+      "memberBudgets": [
+        {
+          "id": "member-1",
+          "budgetFen": 60000
+        },
+        {
+          "id": "member-2",
+          "budgetFen": 60000
+        }
+      ],
+      "constraintsByMember": [
+        {
+          "id": "member-1",
+          "mustVisit": [
+            "拙政园"
+          ],
+          "dietaryRestrictions": [
+            "素食"
+          ]
+        },
+        {
+          "id": "member-2",
+          "mustVisit": [
+            "平江路"
+          ],
+          "dietaryRestrictions": []
+        }
+      ]
+    },
+    "issues": [
+      {
+        "code": "PACE_CONFLICT",
+        "message": "成员节奏不同，建议先按最宽松的节奏编排",
+        "members": [
+          "member-1",
+          "member-2"
+        ]
+      },
+      {
+        "code": "MEAL_UNCONFIRMED",
+        "message": "缺少餐饮地点",
+        "date": "2026-12-05"
+      },
+      {
+        "code": "MEAL_UNCONFIRMED",
+        "message": "缺少餐饮地点",
+        "date": "2026-12-06"
+      },
+      {
+        "code": "ROUTE_UNVERIFIED",
+        "message": "路线耗时待确认",
+        "day": 1,
+        "date": "2026-12-05",
+        "from": "苏州站",
+        "to": "拙政园",
+        "mode": "walking",
+        "providerCode": null
+      },
+      {
+        "code": "ROUTE_UNVERIFIED",
+        "message": "路线耗时待确认",
+        "day": 2,
+        "date": "2026-12-06",
+        "from": "拙政园",
+        "to": "平江路",
+        "mode": "walking",
+        "providerCode": null
+      },
+      {
+        "code": "ROUTE_UNVERIFIED",
+        "message": "路线耗时待确认",
+        "day": 2,
+        "date": "2026-12-06",
+        "from": "平江路",
+        "to": "苏州站",
+        "mode": "walking",
+        "providerCode": null
+      },
+      {
+        "code": "JOURNEY_TIME_UNCONFIRMED",
+        "message": "首末日往返衔接时刻待确认",
+        "kind": "outbound"
+      },
+      {
+        "code": "JOURNEY_TIME_UNCONFIRMED",
+        "message": "首末日往返衔接时刻待确认",
+        "kind": "return"
+      },
+      {
+        "code": "TIMETABLE_UNCONFIRMED",
+        "message": "站点为衔接建议，车次与到发时间待确认",
+        "date": "2026-12-05",
+        "place": "苏州站"
+      },
+      {
+        "code": "OPENING_UNVERIFIED",
+        "message": "营业时间待确认",
+        "day": 2,
+        "date": "2026-12-06",
+        "place": "平江路"
+      },
+      {
+        "code": "TIMETABLE_UNCONFIRMED",
+        "message": "站点为衔接建议，车次与到发时间待确认",
+        "date": "2026-12-06",
+        "place": "苏州站"
+      },
+      {
+        "code": "PRICE_MISSING",
+        "message": "费用待确认",
+        "expenseId": "expense-2",
+        "category": "餐饮"
+      },
+      {
+        "code": "PRICE_MISSING",
+        "message": "费用待确认",
+        "expenseId": "expense-3",
+        "category": "市内交通"
+      },
+      {
+        "code": "PRICE_MISSING",
+        "message": "费用待确认",
+        "expenseId": "expense-4",
+        "category": "住宿"
+      },
+      {
+        "code": "PRICE_MISSING",
+        "message": "费用待确认",
+        "expenseId": "expense-5",
+        "category": "往返交通"
+      }
+    ]
+  }
+}

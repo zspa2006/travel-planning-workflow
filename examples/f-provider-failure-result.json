@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "demo-provider-failure",
+  "nodeId": "retrieve",
+  "attempt": 1,
+  "status": "error",
+  "error": {
+    "code": "AMAP_UNAVAILABLE",
+    "message": "模拟高德检索失败",
+    "retryable": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "demo-invalid",
+  "nodeId": "parse",
+  "attempt": 1,
+  "status": "error",
+  "error": {
+    "code": "INVALID_INPUT",
+    "message": "请提供有效旅行时长（单次任务最多 3660 天），且与出发及返程日期一致",
+    "retryable": false
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "runId": "demo-invalid",
+  "input": {
+    "room": {
+      "id": "suzhou-demo",
+      "destination": "苏州",
+      "startDate": "2026-12-06",
+      "endDate": "2026-12-05"
+    }
+  }
+}
