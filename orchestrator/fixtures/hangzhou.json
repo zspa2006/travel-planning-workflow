@@ -1,0 +1,33 @@
+{
+  "snapshot_id": "snap-sz-001",
+  "team_id": "team-sz-01",
+  "captured_at": "2026-11-14T08:00:00.000Z",
+  "basis_token": "basis-v1-sz-001",
+  "officialVersion": 1,
+  "travel": {
+    "destination": "杭州",
+    "start_date": "2026-12-05",
+    "end_date": "2026-12-06",
+    "start_point": "杭州站",
+    "end_point": "杭州站"
+  },
+  "members": [
+    { "member_id": "m1", "name": "林小林", "role": "initiator" },
+    { "member_id": "m2", "name": "陈阿陈", "role": "follower" },
+    { "member_id": "m3", "name": "周小周", "role": "follower" }
+  ],
+  "common_conditions": {
+    "revision": 3,
+    "current_version": {
+      "budget_fen": 1200000,
+      "must_visit": ["西湖", "灵隐寺"],
+      "dietary_restrictions": ["花生"],
+      "pace": "balanced"
+    }
+  },
+  "readiness": {
+    "member_count": 3,
+    "confirmed_count": 3,
+    "ready_for_shared_planning": true
+  }
+}
